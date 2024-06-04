@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Employee</title>
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1500&q=60");
+            background-repeat: no-repeat;
+        }
+        div{
+            text-align: center;
+            margin-top: 15%;
+        }
+        input{
+            text-align: center;
+            width: 280px;
+            height: 25px;
+            border-radius: 4px;
+            border: 2px solid black;
+            background-color:silver ;
+        }
+        #btn{
+            width: 80px;
+            border: 1px solid black;
+            background-color:burlywood;
+        }
+        #btn:hover{
+            cursor: pointer;
+            background-color: red;
+            color: aliceblue;
+        }
+        h1{
+            font-size: 49px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1 style="color: rgb(64, 234, 240);">Enter the username of employee to delete from Database.</h1>
+<form action="deleted/" method="POST">{% csrf_token %}
+    <input type="text" placeholder="Username" name="delUser">
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="Delete" id="btn">
+</form>
+<br>
+<a href="javascript:history.back()"><input type="button" value="Back" id="btn"></a>
+</div>
+</body>
+</html>

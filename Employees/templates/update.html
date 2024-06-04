@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1577017040065-650ee4d43339?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1500&q=60");
+            background-repeat: no-repeat;
+        }
+        h1{
+            font-size: 2.4rem;
+        }
+        .container{
+            display: flex;
+            /* width: 100%; */
+            /* height: 100%; */
+        }
+        .box1{
+            text-align: center;
+            justify-content: center;
+            padding-top: 200px;
+            margin-left: 100px;
+        }
+        .box2{
+            text-align: center;
+            justify-content: center;
+            padding-left: 180px;
+            margin-top: 70px;
+        }
+        input{
+            width: 270px;
+            padding: 7px;
+            background-color:rgb(196, 8, 46);
+            border-radius: 5px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        #btn1{
+            width: 80px;
+            background-color:rgb(189, 173, 186);
+            border-radius: 12px;
+        }
+        #btn2{
+            width: 80px;
+            background-color:rgb(189, 173, 186);
+            border-radius: 12px;
+        }
+        #btn1:hover{
+            cursor: pointer;
+background-color: green;
+        }
+        #btn2:hover{
+            cursor: pointer;
+background-color: rgb(250, 25, 25);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="box1">
+    <h1>Enter username to update.</h1>
+<form action="" method="POST">{% csrf_token %}
+    <input type="text" name="updateUser" placeholder="Username">
+    <!-- <input type="submit" value="submit"> -->
+</form>
+    </div>
+
+    <div class="box2">
+<h1>Enter details to Update</h1>
+<form action="updated/" method="POST">{% csrf_token %}
+    <input type="email" name="newEmail" placeholder="Enter new Email"><br><br>
+    <input type="number" name="newPhone" minlength="999999999" maxlength="9999999999" placeholder="Enter new phone number"><br><br>
+    <input type="text" name="newDepartment" placeholder="Enter new department"><br><br>
+    <input type="text" name="newRole" placeholder="Enter new role"><br><br>
+    <input type="number" name="newSalary" placeholder="Enter new Salary"><br><br>
+    <input type="number" name="newLeaves" placeholder="Enter total Leaves"><br><br>
+    <input type="text" name="newStatus" placeholder="Enter new Status"><br><br>
+    <input id="btn1" type="submit" value="Update">
+</form>
+<br>
+<a href="javascript:history.back()"><input id="btn2" type="button" value="Back"></a>
+    </div>
+
+</div>
+</body>
+</html>

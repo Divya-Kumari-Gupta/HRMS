@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose</title>
+    <style>
+        body{
+            /* background-color: rosybrown; */
+            background-image: url("https://images.unsplash.com/photo-1687986018999-08d83bc4cf56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=2500&q=60");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        h1{
+            text-align: center;
+            color:rgb(13, 14, 13);
+            text-shadow: 4px 3px grey;
+            margin-top: 100px;
+            font-size: 50px;
+        }
+        ul{
+            /* display: flex;
+            text-align: center;
+            justify-content: center;
+            list-style-type:none; */
+            padding-top: 20px;
+        }
+        li{
+            color:turquoise;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 30px;
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        li:hover{
+            text-decoration: underline;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+        }
+        #btn{
+            text-align: center;
+            justify-content: center;
+            border-radius: 7px;
+            width: 80px;
+            background-color: black;
+            color: white;
+            border:2px solid grey;
+            padding-bottom: 10px;
+            padding-top: 7px;
+            margin-top: 20px;
+            align-items: center;
+            margin-left: 630px;
+        }
+        #btn:hover{
+            background-color: red;
+            cursor: pointer;
+        }
+        .container{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            list-style-type: none;
+        }
+        .li1{
+            margin-right: 100px;
+        }
+        .li2{
+            margin-left:100px;
+        }
+    </style>
+</head>
+<body background="image.jpg">
+    <h1>What action would you like to perform?</h1>
+<ul>
+    <div class="container">
+        <div >
+    <a href="details/" ><li class="li1">A. Add Employee</li></a>
+    <!-- <hr> -->
+    <a href="display/" ><li class="li3">C. Read Employee Details</li></a>
+    <!-- <hr> -->
+        </div>
+        <div>
+    <a href="update/"><li class="li2">B. Update Employee Details</li></a>
+    <!-- <hr> -->
+    <a href="delete/"><li class="li4">D. Delete Employee</li></a>
+    <!-- <hr> -->
+        </div>
+</div>
+
+</ul>
+
+<a href="/"><input id="btn" type="button" value="Log Out"></a>
+</body>
+</html>

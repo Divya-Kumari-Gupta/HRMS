@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b2ZmaWNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=3500&q=60");
+            /* background-color: black; */
+            background-size: 100%;
+        }
+        h1{
+            text-align: center;
+            font-size: 49px;
+            text-shadow: 2px 2px;
+            color: aliceblue;
+        }
+        input{
+            margin-left:46%;
+            padding: 4px 20px;
+            background-color:tomato;
+            border-radius: 7px;
+        }
+        div{
+            text-align: center;
+            margin-left: 30px;
+        }
+        td,th{
+            color: black;
+            
+        }
+        input:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employees Detail</h1>
+    <div>
+<table border="0" cellpadding="10" cellspacing="1" >
+<tr>
+    <!-- <th>Employee Id</th> -->
+    <th>Username</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Age</th>
+    <th>Department</th>
+    <th>Role</th>
+    <th>Salary</th>
+    <th>Leaves</th>
+    <th>Join Date</th>
+    <th>Status</th>
+</tr>
+
+{% for i in employee %}
+<tr>
+    <td>{{i.username}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.phoneNumber}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.department}}</td>
+    <td>{{i.role}}</td>
+    <td>{{i.salary}}</td>
+    <td>{{i.leaves}}</td>
+    <td>{{i.joinDate}}</td>
+    <td>{{i.status}}</td>
+</tr>
+
+{% endfor %}
+</table>
+</div>
+<br>
+<a href="javascript:history.back()"><input type="button" value="Back"></a>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <style>
+        body{
+            /* background-color: black; */
+            background-image: url("https://images.unsplash.com/photo-1687894986595-da703eb96375?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NTJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=2500&q=60");
+            background-size: 100%;
+        }
+        h1{
+            display: block;
+            color:rgb(112, 131, 212);
+            text-align: center;
+            font-size: 44px;
+        }
+        form{
+            /* display: block; */
+            color: aliceblue;
+            margin-left: 200px ;
+        }
+        a{
+            display: inline;
+            align-items: center;
+            width: 100px;
+            /* align-content: center; */
+            /* align:center; */
+        }
+        .container{
+            display: flex;
+            /* justify-content: center; */
+            
+        }
+        input{
+            padding: 7px;
+            width: 300px;
+            background: black;
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+        }
+        #back{
+            margin-left: 320px;
+            width: 70px;
+            background-color: brown;
+        }
+    #frm{
+        width: 70px;
+        margin-left: 55px;
+        background-color:brown;
+    }
+    #frm,#back:hover{
+        cursor: pointer;
+    }
+    
+    </style>
+</head>
+<body>
+     
+    <h1>Enter Details of Employee to ADD</h1>
+    <div class="container">   
+    <div>
+<form action="" method="POST"> {% csrf_token %}
+    {{form.as_p}}
+    <a href="" ><input id="frm" type="submit" value="Add"></a>
+    <a href="../display/" ><input id="frm" type="button" value="Display"></a>
+</form>
+<br>
+<a href="javascript:history.back()" ><input id="back" id="frm" type="button" value="Back"></a>
+</div>
+<div>
+
+</div>
+</div>
+<!-- <a href="www.google.com"><input type="submit" value="send"></a> -->
+</body>
+</html>
